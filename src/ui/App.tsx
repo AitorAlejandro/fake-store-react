@@ -1,17 +1,17 @@
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import {Home} from './pages';
+import { StoreRouter } from "./bridge";
+import { Home } from "./pages";
 
-import 'normalize-css';
+import "normalize-css";
 
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
-        <h1>Fake Store React</h1>
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-    </BrowserRouter>
+    <StoreRouter.BrowserRouter>
+      <h1>Fake Store React</h1>
+      <StoreRouter.Switch>
+        <StoreRouter.Route path="/">
+          <Home />
+        </StoreRouter.Route>
+      </StoreRouter.Switch>
+    </StoreRouter.BrowserRouter>
   );
-}
+};
