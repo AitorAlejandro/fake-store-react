@@ -1,1 +1,1 @@
-export const API_ROOT = "https://fakestoreapi.com";
+export const HTTP_API_ROOT = "https://fakestoreapi.com";
