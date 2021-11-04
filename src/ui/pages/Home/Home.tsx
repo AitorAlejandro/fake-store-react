@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Product, getProducts } from "../../../core";
+import { GetProducts, HttpProductRepository, Product } from "../../../core";
 
 export const Home: React.FC = () => {
   const [products, setProducts] = React.useState<Product[]>([]);
 
   React.useEffect(() => {
-    getProducts()
+    GetProducts(HttpProductRepository)
       .then(setProducts)
       .catch((error) => {
         console.error(error);
