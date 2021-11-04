@@ -1,7 +1,8 @@
 import { StoreRouter } from "./bridge";
 import { Home } from "./pages";
 
-import "normalize-css";
+// import "normalize-css";
+import "milligram";
 
 export const App: React.FC = () => {
   return (
