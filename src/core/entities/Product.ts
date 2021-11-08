@@ -1,5 +1,5 @@
-import type {Rating} from "..";
-import type {Url} from "..";
+import type { Rating } from "./";
+import type { Url } from "./";
 
 export type Product = {
   id: number;
