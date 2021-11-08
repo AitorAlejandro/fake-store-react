@@ -1,6 +1,6 @@
-import { ProductRepository } from "../../entities";
+import { ProductApi } from "../../entities";
 import { getProducts } from "./HttpGetProducts";
 
-export const HttpProductRepository: ProductRepository = {
-    getProducts,
+export const HttpProductRepository: ProductApi = {
+  getProducts,
 };

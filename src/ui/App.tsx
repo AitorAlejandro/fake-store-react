@@ -7,10 +7,10 @@ import "milligram";
 export const App: React.FC = () => {
   return (
     <StoreRouter.BrowserRouter>
-      <h1>Fake Store React</h1>
       <StoreRouter.Switch>
-        <StoreRouter.Route path="/">
-          <Home />
+        <StoreRouter.Route exact path="/" component={Home} />
+        <StoreRouter.Route path="*">
+          <StoreRouter.Redirect to="/" />
         </StoreRouter.Route>
       </StoreRouter.Switch>
     </StoreRouter.BrowserRouter>
