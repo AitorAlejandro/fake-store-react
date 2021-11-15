@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ProductList } from "../../../core/entities";
 import { ProductApplication } from "../../../core/application";
+import { HomeLayout } from "../../layouts";
 
 export const Home: React.FC = () => {
   const [products, setProducts] = React.useState<ProductList>([]);
@@ -14,8 +15,7 @@ export const Home: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <h1>Fake Store Home</h1>
+    <HomeLayout>
       {products.length > 0 ? (
         <ul>
           {products.map((product) => (
@@ -32,6 +32,6 @@ export const Home: React.FC = () => {
       ) : (
         <div>Loading...</div>
       )}
-    </>
+    </HomeLayout>
   );
 };
