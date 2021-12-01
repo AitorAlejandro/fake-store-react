@@ -1,14 +1,15 @@
 import * as React from "react";
-import { ProductList } from "../../../core/entities";
+import { Product } from "../../../core/entities";
 import { ProductApplication } from "../../../core/application";
 import { HomeLayout } from "../../layouts";
+import { ProductList } from "../../components";
 
 export const Home: React.FC = () => {
-  const [products, setProducts] = React.useState<ProductList>([]);
+  const [products, setProducts] = React.useState<Product[]>([]);
 
   React.useEffect(() => {
     ProductApplication.getProducts()
-      .then((products: ProductList) => setProducts(products))
+      .then((products: Product[]) => setProducts(products))
       .catch((error) => {
         console.error(error);
       });
@@ -17,21 +18,12 @@ export const Home: React.FC = () => {
   return (
     <HomeLayout>
       {products.length > 0 ? (
-        <ul>
-          {products.map((product) => (
-            <li>
-              <div>{product.id}</div>
-              <div>{product.title}</div>
-              <div>{product.price}</div>
-              <div>{product.description}</div>
-              <div>{product.category}</div>
-              <img alt="" src={product.image} />
-            </li>
-          ))}
-        </ul>
+        <ProductList products={products} />
       ) : (
         <div>Loading...</div>
       )}
     </HomeLayout>
   );
 };
+
+Home.displayName = "Home";
