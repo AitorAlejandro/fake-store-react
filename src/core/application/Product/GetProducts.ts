@@ -1,5 +1,5 @@
-import type { ProductList, ProductApi } from "../../entities";
+import type { Product, ProductApi } from "../../entities";
 
-export const GetProducts = (productRepository: ProductApi) => (): Promise<ProductList>  => {
+export const GetProducts = (productRepository: ProductApi) => (): Promise<Product[]>  => {
   return productRepository.getProducts();
 };

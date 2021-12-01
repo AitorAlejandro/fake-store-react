@@ -1,5 +1,5 @@
-import type { ProductList } from "./";
+import type { Product } from "./";
 
 export interface ProductApi {
-  getProducts(): Promise<ProductList>;
+  getProducts(): Promise<Product[]>;
 }

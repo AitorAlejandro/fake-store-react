@@ -1,7 +1,7 @@
-import type { ProductList } from "../../entities";
+import type { Product } from "../../entities";
 import { FAKE_API_URL } from "../infraestructure.constants";
 
-export async function getProducts(): Promise<ProductList> {
+export async function getProducts(): Promise<Product[]> {
   const headers: Headers = new Headers({
     "Content-Type": "application/json",
   });
