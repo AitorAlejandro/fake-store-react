@@ -13,8 +13,10 @@ export const ProductList: React.FC<ProductListProps> = ({ products = [] }) => {
       {products.map((product) => (
         <li key={product.id} className="product-list__item">
           <img alt="" src={product.image} />
-          <div className="product-list__item-title">{product.title}</div>
-          <div>{product.price}</div>
+          <div className="product-list__item-content">
+            <div className="product-list__item-title">{product.title}</div>
+            <div>{product.price}</div>
+          </div>
         </li>
       ))}
     </ul>
