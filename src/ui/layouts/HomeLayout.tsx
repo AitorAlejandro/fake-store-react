@@ -19,3 +19,5 @@ export const HomeLayout: React.FC<HomeLayoutProps> = (props) => {
     </div>
   );
 };
+
+HomeLayout.displayName = "HomeLayout";
